@@ -1,3 +1,88 @@
-body { font-family: sans-serif; background-color: #f4f4f4; color: #333; padding: 20px; }
-.comando { background: white; padding: 15px; margin-bottom: 10px; border-left: 5px solid #2ecc71; border-radius: 4px; }
-h1 { color: #2c3e50; }
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+
+    /* Fondo espacial */
+    background-image: url('galaxy.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: white;
+    padding: 20px;
+}
+
+/* Oscurece un poco el fondo */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.6);
+
+    z-index: -1;
+}
+
+/* Título */
+h1 {
+    text-align: center;
+
+    color: #ffe600;
+
+    text-shadow:
+        0 0 5px #ffe600,
+        0 0 15px #ff9900,
+        0 0 30px #ff6600;
+
+    margin-bottom: 25px;
+}
+
+/* Tarjetas */
+.comando {
+    background: rgba(0, 0, 0, 0.75);
+
+    border: 3px solid #00ffff;
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    backdrop-filter: blur(5px);
+
+    box-shadow:
+        0 0 10px #00ffff,
+        0 0 25px #00ffff66;
+
+    transition: 0.3s;
+}
+
+/* Hover */
+.comando:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 0 15px #ff00ff,
+        0 0 35px #ff00ff;
+}
+
+/* Títulos de comandos */
+.comando h2 {
+    color: #39ff14;
+
+    text-shadow:
+        0 0 5px #39ff14,
+        0 0 15px #39ff14;
+
+    margin-bottom: 15px;
+}
+
+/* Texto */
+.comando p {
+    color: #f1f1f1;
+    font-size: 12px;
+    line-height: 1.8;
+}
